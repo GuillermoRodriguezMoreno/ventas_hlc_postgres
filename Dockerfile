@@ -11,4 +11,4 @@ RUN mvn clean package -DskipTests
 FROM amazoncorretto:17-alpine
 COPY --from=build /target/spring_boot_web_mvc_jdbc_ventas.jar spring_boot_web_mvc_jdbc_ventas.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar","spring_boot_web_mvc_jdbc_ventas.jar"]
+ENTRYPOINT ["java", "-jar","ventas_hlc_postgres.jar"]
